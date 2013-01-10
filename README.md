@@ -1,5 +1,5 @@
 gentoo-overlay
 ==============
 
-Gentoo overlay for Edonkey/Bittorent client on QT
+Gentoo overlay for qmule - Edonkey/Bittorent client on QT
 
