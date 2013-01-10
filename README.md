@@ -1,11 +1,11 @@
-qMule gentoo-overlay
+qMule ebuilds
 ==============
 
 Gentoo overlay for qmule - Edonkey/Bittorent client on QT
 
 
-Layman help
------------
+##Layman help
+
 1. Check **app-portage/layman** compiled with **git** use flag
 2. Add overlay url to layman.cfg "overlays" section:
         
