@@ -21,7 +21,7 @@ DEPEND="=net-libs/rb_libtorrent-0.15.10
 	>=dev-libs/boost-1.49.0
 	>=dev-libs/boost-logging-2.0.0
 	x11-libs/qt-webkit
-	>=net-libs/libed2k-1.2
+	>=net-libs/libed2k-0.1
 	virtual/pkgconfig"
 
 RDEPEND="${CDEPEND}
