@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE repositories SYSTEM "/dtd/repositories.dtd">
+<repositories xmlns="" version="1.0">
+  <repo quality="experimental" status="unofficial">
+    <name>qmule</name>
+    <description lang="en">qmule overlay for Gentoo</description>
+    <homepage>https://github.com/qmule/gentoo-overlay</homepage>
+    <owner type="person">
+      <email>psrustik@yandex.ru</email>
+      <name>psrustik</name>
+    </owner>
+    <source type="git">https://github.com/qmule/gentoo-overlay.git</source>
+  </repo>
+</repositories>
