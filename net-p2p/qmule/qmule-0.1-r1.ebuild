@@ -1,21 +1,20 @@
 EAPI=4
-inherit qt4-r2 eutils git-2
-
-EGIT_REPO_URI='git://github.com/qmule/qmule.git'
+inherit qt4-r2 eutils
 
 DESCRIPTION="qmule edonkey2000 and bittorent client"
 HOMEPAGE="https://github.com/qmule/qmule"
 SLOT=0
+SRC_URI="https://github.com/qmule/qmule/archive/release-${PV}.tar.gz -> ${P}.tar.gz"
 
 #todo set license
 LICENSE="Oslik"
 
-KEYWORDS="~amd64 ~x86"
+KEYWORDS="amd64 x86"
 
 
 QT_MIN="4.6.1"
 
-DEPEND="=net-libs/rb_libtorrent-0.15.10
+DEPEND=">=net-libs/rb_libtorrent-0.15.10
 	>=dev-qt/qtcore-${QT_MIN}:4
 	X? ( >=dev-qt/qtgui-${QT_MIN}:4 )
 	dbus? ( >=dev-qt/qtdbus-${QT_MIN}:4 )
