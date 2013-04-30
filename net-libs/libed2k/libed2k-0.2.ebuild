@@ -10,8 +10,8 @@ LICENSE="Oslik"
 KEYWORDS="amd64 x86"
 
 DEPEND=">=dev-libs/boost-1.49.0
+<dev-libs/boost-1.50.0
 >=dev-libs/boost-logging-2.0.0
->=net-libs/rb_libtorrent-0.15.10
 dev-libs/openssl
 "
 

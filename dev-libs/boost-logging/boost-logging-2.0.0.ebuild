@@ -8,7 +8,8 @@ SRC_URI="https://dl.dropbox.com/s/nycodgwto75j07g/boost-logging.zip"
 LICENSE="Boost-1.0"
 KEYWORDS="amd64 x86"
 
-DEPEND="dev-libs/boost"
+DEPEND=">=dev-libs/boost-1.49.0
+<dev-libs/boost-1.50.0"
 RDEPEND="${DEPEND}"
 
 src_install(){

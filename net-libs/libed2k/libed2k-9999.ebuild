@@ -1,26 +1,24 @@
 EAPI=4
+inherit git-2
 DESCRIPTION="Edonkey 2000 lib"
 HOMEPAGE="https://github.com/qmule/libed2k"
 SLOT=0
 
-EGIT_REPO_URI='git://github.com/qmule/libed2k.git'
-inherit git-2
+EGIT_REPO_URI="git://github.com/qmule/libed2k.git"
+EGIT_BRANCH="develop"
 
 #todo set license
 LICENSE="Oslik"
 
 KEYWORDS="~amd64 ~x86"
 
-DEPEND=">=dev-libs/boost-1.49.0
+DEPEND="=dev-libs/boost-1.49.0
 >=dev-libs/boost-logging-2.0.0
->=net-libs/rb_libtorrent-0.15.10
 dev-libs/openssl
 "
 
 RDEPEND="${DEPEND}"
 IUSE="debug"
-
-S="${WORKDIR}/libed2k-release-${PV}"
 
 pkg_setup() {
 	export EXTRA_EMAKE="${EXTRA_EMAKE} BOOST_ROOT=/usr"		#gentoo exists

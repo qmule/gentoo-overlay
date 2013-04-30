@@ -1,7 +1,8 @@
 EAPI=4
 inherit qt4-r2 eutils git-2
 
-EGIT_REPO_URI='git://github.com/qmule/qmule.git'
+EGIT_REPO_URI="git://github.com/qmule/qmule.git"
+EGIT_BRANCH="develop"
 
 DESCRIPTION="qmule edonkey2000 and bittorent client"
 HOMEPAGE="https://github.com/qmule/qmule"
@@ -20,9 +21,10 @@ DEPEND="=net-libs/rb_libtorrent-0.15.10
 	X? ( >=dev-qt/qtgui-${QT_MIN}:4 )
 	dbus? ( >=dev-qt/qtdbus-${QT_MIN}:4 )
 	>=dev-libs/boost-1.49.0
+	<dev-libs/boost-1.50.0
 	>=dev-libs/boost-logging-2.0.0
 	dev-qt/qtwebkit
-	>=net-libs/libed2k-0.1
+	>=net-libs/libed2k-9999
 	virtual/pkgconfig"
 
 RDEPEND="${CDEPEND}
@@ -32,9 +34,9 @@ RDEPEND="${CDEPEND}
 RDEPEND="${DEPEND}"
 IUSE="debug +X geoip dbus"
 
-S="${WORKDIR}/qmule-release-${PV}"
-
 src_configure() {
+	#todo to Makefile
+	lrelease "${S}"/src/src.pro
 	#todo use flag options
 	eqmake4 "${S}"/qMule.pro PREFIX=/usr/
 }
